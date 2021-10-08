@@ -1,0 +1,23 @@
+.page {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.page__body {
+  @include font-primary;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: $color-dark;
+  font-weight: 400;
+}
+
+.page__framework-container {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: $large-viewport-width;
+}
