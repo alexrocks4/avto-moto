@@ -1,4 +1,4 @@
-export const AppRoute = {
+const AppRoute = {
   ROOT: '/',
   AUTOS: '/autos',
   CONTACTS: '/contacts',
@@ -15,4 +15,15 @@ export const AppRoute = {
   CREDIT: '/credit',
   LEAVE_COMMENT: '/leave-comment',
   AUTO: '/auto',
+};
+
+const ButtonRootElement = {
+  ROUTER_LINK: 'router-link',
+  ROUTER_NAV_LINK: 'router-nav-link',
+  BUTTON: 'button',
+};
+
+export {
+  AppRoute,
+  ButtonRootElement
 };

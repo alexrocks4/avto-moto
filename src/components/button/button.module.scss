@@ -1,0 +1,13 @@
+.button {
+  box-sizing: border-box;
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
