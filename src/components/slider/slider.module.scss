@@ -35,7 +35,7 @@
 .slider__previous-button-container,
 .slider__next-button-container {
   position: absolute;
-  top: 10px;
+  top: 14px;
   padding-top: 8.66666%;
   width: 8.66666%;
   height: 0;
@@ -108,12 +108,12 @@
 
 .slider__previous-button {
   &::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(calc(-50% - 3px), -50%) rotate(-45deg);
   }
 }
 
 .slider__next-button {
   &::after {
-    transform: translate(-50%, -50%) rotate(135deg);
+    transform: translate(calc(-50% + 3px), -50%) rotate(135deg);
   }
 }
