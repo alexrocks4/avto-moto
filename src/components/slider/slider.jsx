@@ -103,6 +103,7 @@ function Slider({ className }) {
   return (
     <figure className={`${className} ${styles.slider}`}>
       <div className={styles['slider__main-slider']}>
+        <p className={styles['slider__label']}>New model</p>
         <Slide
           className={styles['slider__slide']}
           slideImg={mainSliderImages[activeSlideId]}
