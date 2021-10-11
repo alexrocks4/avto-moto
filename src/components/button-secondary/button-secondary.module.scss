@@ -1,0 +1,22 @@
+@import "../../assets/sass/variables.scss";
+
+.button-secondary {
+  border: 1px solid $color-accent;
+  background-color: transparent;
+  padding: 15px 19px 16px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.12em;
+  color: $color-accent;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-accent;
+    color: $color-light-light;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

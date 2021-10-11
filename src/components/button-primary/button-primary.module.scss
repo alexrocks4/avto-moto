@@ -1,0 +1,21 @@
+@import "../../assets/sass/variables.scss";
+
+.button-primary {
+  background-color: $color-accent;
+  border: none;
+  padding: 17px 19px 17px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.12em;
+  color: $color-light-light;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-accent-1;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
