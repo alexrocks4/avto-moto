@@ -1,0 +1,30 @@
+@import "../../assets/sass/variables.scss";
+
+.button-tab {
+  background-color: transparent;
+  border: 1px solid $color-light-1;
+  padding: 15px;
+  width: 195px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27.24px;
+  color: $color-dark;
+  text-align: center;
+
+  &:hover:not(.button-tab--active) {
+    border-color: $color-accent-1;
+    background-color: $color-accent-1;
+    color: $color-light-light;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.button-tab--active {
+  border-color: $color-accent;
+  background-color: $color-accent;
+  color: $color-light-light;
+  pointer-events: none;
+}
