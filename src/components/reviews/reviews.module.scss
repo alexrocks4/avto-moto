@@ -1,0 +1,23 @@
+@import "../../assets/sass/variables.scss";
+
+.reviews {
+  position: relative;
+  min-height: 52px;
+  font-size: 15px;
+  line-height: 20.43px;
+  color: $color-dark-dark;
+}
+
+.reviews__comment-button {
+  position: absolute;
+  top: -1px;
+  right: 8px;
+}
+
+.reviews__review {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
