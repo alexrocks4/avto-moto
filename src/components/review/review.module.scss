@@ -46,6 +46,18 @@
   }
 }
 
+.review:last-of-type .review__advantages-container {
+  margin-bottom: 10px;
+}
+
+.review:last-of-type .review__list-disadvantages-description {
+  padding-left: 2px;
+}
+
+.review:last-of-type .review__disadvantages-container {
+  margin-bottom: 27px;
+}
+
 .review__disadvantages-container {
   &::before {
     position: absolute;

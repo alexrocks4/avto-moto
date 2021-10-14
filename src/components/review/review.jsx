@@ -30,7 +30,12 @@ function Review({ className, data }) {
         </div>
         <div className={styles['review__disadvantages-container']}>
           <dt className={styles['review__list-term']}>Недостатки</dt>
-          <dd className={styles['review__list-description']}>{disadvantages}</dd>
+          <dd className={classNames(
+            styles['review__list-description'],
+            styles['review__list-disadvantages-description'])}
+          >
+            {disadvantages}
+          </dd>
         </div>
         <div>
           <dt className={styles['review__list-term']}>Комментарий</dt>
