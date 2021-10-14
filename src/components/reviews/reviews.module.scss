@@ -1,7 +1,9 @@
 @import "../../assets/sass/variables.scss";
 
 .reviews {
+  box-sizing: border-box;
   position: relative;
+  padding: 31px 0 0 0;
   min-height: 52px;
   font-size: 15px;
   line-height: 20.43px;
@@ -10,7 +12,7 @@
 
 .reviews__comment-button {
   position: absolute;
-  top: -1px;
+  top: 30px;
   right: 8px;
 }
 

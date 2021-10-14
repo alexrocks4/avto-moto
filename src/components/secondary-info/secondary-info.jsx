@@ -32,7 +32,7 @@ function SecondaryInfo({ className }) {
     <section className={classNames(className, styles['secondary-info'])}>
       <h2 className="visually-hidden">Дополнительная информация</h2>
       <WrapperFluid>
-        <div className={styles['secondary-info__tabs-container']}>
+        <div>
           <ButtonTab
             isActive={activeTab === Tab.CHARACTERISTICS}
             onClick={handleButtonTabClick.bind(null, Tab.CHARACTERISTICS)}
