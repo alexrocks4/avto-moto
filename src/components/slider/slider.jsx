@@ -170,6 +170,7 @@ function Slider({ className }) {
             type="button"
             onClick={handlePreviousButtonClick}
             disabled={isPreviousButtonInactive}
+            aria-label="Показать предыдущий слайд"
           />
         </div>
 
@@ -181,6 +182,7 @@ function Slider({ className }) {
             type="button"
             onClick={handleNextButtonClick}
             disabled={isNextButtonInactive}
+            aria-label="Показать следующий слайд"
           />
         </div>
       </figure>
