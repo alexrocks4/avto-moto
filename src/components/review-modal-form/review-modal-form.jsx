@@ -109,6 +109,7 @@ function ReviewModalForm({ className, onClose }) {
               placeholder="Имя"
               onFocus={handleNameInputFocus}
               onChange={handleInputChange}
+              autoFocus
             />
           </label>
 
