@@ -5,6 +5,10 @@ import styles from './review-modal-form.module.scss';
 import Button from '../button/button';
 import ButtonPrimary from '../button-primary/button-primary';
 import { DECIMAL_RADIX } from '../../const';
+import { useDispatch } from 'react-redux';
+import { reviewAdded } from '../../store/reviewsSlice';
+import { nanoid } from '@reduxjs/toolkit';
+import dayjs from 'dayjs';
 
 const ErrorMessage = {
   REQUIRED: 'Пожалуйста, заполните поле',
@@ -14,14 +18,17 @@ const RATING_INPUT_NAME = 'rating';
 const RATING_VALUES = [1, 2, 3, 4, 5];
 
 function ReviewModalForm({ className, onClose }) {
+  const dispatch = useDispatch();
   const [ isUsernameErrorVisible, setIsUsernameErrorVisible ] = useState(false);
   const [ isCommentErrorVisible, setIsCommentErrorVisible ] = useState(false);
   const [ formData, setFormData ] = useState({
+    id: null,
     username: '',
     advantages: '',
     disadvantages: '',
-    rating: '',
+    rating: 0,
     comment: '',
+    date: '',
   });
 
   const handleFormSubmit = (evt) => {
@@ -37,7 +44,14 @@ function ReviewModalForm({ className, onClose }) {
       return;
     }
 
-    return null;
+    const review = {
+      ...formData,
+      id: nanoid(),
+      date: dayjs().toISOString(),
+    };
+
+    dispatch(reviewAdded(review));
+    onClose(evt);
   };
 
   const handleInputChange = (evt) => {

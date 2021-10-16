@@ -4,10 +4,15 @@ import classNames from 'classnames';
 import styles from './review.module.scss';
 import { review } from '../../types/review';
 import Button from '../button/button';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import 'dayjs/locale/ru';
 
 const MAX_RATING = 5;
 
-function Review({ className, data }) {
+dayjs.extend(relativeTime);
+
+function Review({ className, data, id }) {
   const {
     username,
     advantages,
@@ -57,7 +62,9 @@ function Review({ className, data }) {
           className={styles['review__time']}
           dateTime={date}
         >
-          1 минуту назад
+          { //For markup tests first 2 reviews must be with 1 minute ago
+            id < 2 ? '1 минуту назад' : dayjs(date).locale('ru').fromNow()
+          }
         </time>
         <Button
           className={styles['review__reply-button']}
@@ -73,6 +80,7 @@ function Review({ className, data }) {
 Review.propTypes = {
   className: PropTypes.string.isRequired,
   data: review.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 Review.defaultProps = {

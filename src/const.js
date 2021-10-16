@@ -25,6 +25,10 @@ const ButtonRootElement = {
 
 const DECIMAL_RADIX = 10;
 
+export const LocalStorageKey = {
+  REVIEWS: 'avtomoto_reviews',
+};
+
 export {
   AppRoute,
   ButtonRootElement,

@@ -4,13 +4,15 @@ import classNames from 'classnames';
 import styles from './reviews.module.scss';
 import ButtonSecondary from '../button-secondary/button-secondary';
 import { AppRoute, ButtonRootElement } from '../../const';
-import { reviews } from '../../mocks/reviews';
 import Review from '../review/review';
 import Modal from '../modal/modal';
 import ReviewModalForm from '../review-modal-form/review-modal-form';
+import { selectReviews } from '../../store/reviewsSlice';
+import { useSelector } from 'react-redux';
 
 function Reviews({ className }) {
   const [ isModalOpened, setIsModalOpened ] = useState(false);
+  const reviews = useSelector(selectReviews);
 
   const handleCommentButtonClick = useCallback((evt) => {
     evt.preventDefault();
@@ -25,11 +27,12 @@ function Reviews({ className }) {
   return (
     <section className={classNames(className, styles['reviews'])}>
       <h3 className="visually-hidden">Отзывы</h3>
-      {reviews.map((review) => (
+      {reviews.map((review, id) => (
         <Review
           className={styles['reviews__review']}
           key={review.id}
           data={review}
+          id={id}
         />
       ))}
 
