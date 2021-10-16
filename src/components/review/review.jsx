@@ -46,6 +46,7 @@ function Review({ className, data }) {
         <span
           className={styles['review__rating-stars']}
           style={{ width: percentageRating }}
+          role="img"
           aria-label={`Рейтинг ${rating} из ${MAX_RATING}`}
         />
         Советует

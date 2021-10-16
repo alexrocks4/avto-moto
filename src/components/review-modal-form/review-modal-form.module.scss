@@ -1,0 +1,233 @@
+@import "../../assets/sass/variables.scss";
+
+.review-modal-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 29px 34px 35px 35px;
+  width: 698px;
+  height: 415px;
+  background-color: $color-light;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.review-modal-form__title {
+  margin: 0 0 24px 0;
+  padding: 0 4px 0 0;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: center;
+}
+
+.review-modal-form__close-button {
+  display: block;
+  position: absolute;
+  top: 21px;
+  right: 22px;
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: $color-gray-1;
+    content: "";
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+}
+
+.review-modal-form__form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.review-modal-form__container {
+  margin-bottom: 35px;
+  width: 300px;
+}
+
+.review-modal-form__container--left {
+  margin-right: 27px;
+}
+
+.review-modal-form__container--right {
+  padding-top: 30px;
+}
+
+.review-modal-form__container--submit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.review-modal-form__label {
+  box-sizing: border-box;
+  display: block;
+  padding: 16px 0 0 0;
+  width: 100%;
+}
+
+.review-modal-form__label--required {
+  position: relative;
+  padding-top: 23px;
+
+  &::before {
+    position: absolute;
+    top: 32px;
+    left: 11px;
+    width: 6px;
+    font: inherit;
+    color: $color-accent;
+    content: "*";
+  }
+}
+
+.review-modal-form__text-input {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid $color-dark-3;
+  padding: 14px 24px 15px 24px;
+  width: 100%;
+  font: inherit;
+  color: inherit;
+
+  &::placeholder {
+    font: inherit;
+    color: inherit;
+  }
+}
+
+.review-modal-form__input-error-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $color-accent-2;
+}
+
+.review-modal-form__text-input--error {
+  border-color: $color-accent-2;
+}
+
+
+.review-modal-form__rating-fieldset {
+  display: block;
+  margin: 0 0 4px 0;
+  border: none;
+  padding: 0;
+}
+
+.review-modal-form__rating-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.review-modal-form__rating-title {
+  display: block;
+  margin: 0 13px 0 0;
+  padding: 3px 0 0 0;
+  width: 120px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20.43px;
+  color: $color-dark-dark;
+}
+
+.review-modal-form__rating-stars-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  width: 167px;
+}
+
+.review-modal-form__rating-label {
+  display: block;
+
+  &:not(:first-of-type) {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.review-modal-form__rating-label:hover path {
+  fill: $color-accent;
+}
+
+.review-modal-form__rating-star {
+  width: 27px;
+  height: 27px;
+}
+
+.review-modal-form__rating-star path {
+  fill: $color-gray-2;
+}
+
+.review-modal-form__rating-stars-input:checked ~ .review-modal-form__rating-label path {
+  fill: $color-accent;
+}
+
+.review-modal-form__label--comment {
+  padding-left: 1px;
+
+  &::before {
+    top: 31px;
+    left: 12px;
+  }
+}
+
+.review-modal-form__comment-textarea {
+  width: 100%;
+  min-height: 118px;
+  appearance: none;
+  resize: none;
+}
+
+.review-modal-form__submit {
+  padding-left: 21px;
+  padding-right: 20px;
+  padding-top: 16px;
+}

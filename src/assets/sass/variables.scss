@@ -12,7 +12,9 @@ $extra-large-wrapper-width: $extra-large-viewport-width - $extra-large-viewport-
 
 // Colors
 $color-dark: #48494d;
-$color-dark-1: #1A212F;
+$color-dark-1: #1a212f;
+$color-dark-2: rgba(88, 87, 87, 0.6);
+$color-dark-3: rgba(72, 73, 77, 0.2);
 $color-dark-dark: #000000;
 $color-dark-dark-1: rgba(0, 0, 0, 0.2);
 $color-dark-special: rgba(72, 73, 77, 0.5);
@@ -21,4 +23,8 @@ $color-light-light: #ffffff;
 $color-light-1: #d7d9df;
 $color-accent: #d12136;
 $color-accent-1: #bd0c21;
+$color-accent-2: #ff0000;
 $color-gray: #d7d9df;
+$color-gray-1: #9f9e9e;
+$color-gray-2: rgba(189, 190, 194, 0.7);
+

@@ -23,7 +23,10 @@ const ButtonRootElement = {
   BUTTON: 'button',
 };
 
+const DECIMAL_RADIX = 10;
+
 export {
   AppRoute,
-  ButtonRootElement
+  ButtonRootElement,
+  DECIMAL_RADIX
 };
