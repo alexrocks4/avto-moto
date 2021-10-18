@@ -96,6 +96,7 @@
     background-image: url("./stars-unrated.svg");
     background-size: 103px 17px;
     background-repeat: no-repeat;
+    background-color: $color-gray-2;
     width: 103px;
     height: 17px;
     content: "";
@@ -110,6 +111,7 @@
   background-image: url("./stars-rated.svg");
   background-size: 103px 17px;
   background-repeat: no-repeat;
+  background-color: $color-accent;
   width: 103px;
   height: 17px;
 }
