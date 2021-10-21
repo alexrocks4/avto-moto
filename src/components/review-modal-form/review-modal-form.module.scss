@@ -210,6 +210,15 @@
   fill: $color-accent;
 }
 
+.review-modal-form__rating-stars-input:focus + .review-modal-form__rating-label .review-modal-form__rating-star {
+  transform: scale(1.2);
+}
+
+.review-modal-form__rating-stars-input:focus:not(:checked):not(:hover) + .review-modal-form__rating-label path {
+  fill: $color-accent;
+  opacity: 0.7;
+}
+
 .review-modal-form__label--comment {
   padding-left: 1px;
 
