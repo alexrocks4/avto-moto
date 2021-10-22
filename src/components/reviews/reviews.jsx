@@ -27,15 +27,6 @@ function Reviews({ className }) {
   return (
     <section className={classNames(className, styles['reviews'])}>
       <h3 className="visually-hidden">Отзывы</h3>
-      {reviews.map((review, id) => (
-        <Review
-          className={styles['reviews__review']}
-          key={review.id}
-          data={review}
-          id={id}
-        />
-      ))}
-
       <ButtonSecondary
         className={styles['reviews__comment-button']}
         rootElement={ButtonRootElement.ROUTER_LINK}
@@ -44,6 +35,14 @@ function Reviews({ className }) {
       >
         оставить отзыв
       </ButtonSecondary>
+      {reviews.map((review, id) => (
+        <Review
+          className={styles['reviews__review']}
+          key={review.id}
+          data={review}
+          id={id}
+        />
+      ))}
 
       {
         isModalOpened && (
