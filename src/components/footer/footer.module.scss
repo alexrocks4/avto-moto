@@ -3,7 +3,7 @@
 .footer {
   box-sizing: border-box;
   margin: 0;
-  padding: 30px 0 0 0;
+  padding: 15px 0 0 0;
   min-height: 82px;
   background-color: $color-light;
   font-weight: 600;
@@ -20,7 +20,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   margin: 0 -66.5px 0 0;
-  padding: 0 0 0 9px;
+  padding: 15px 0 0 9px;
   list-style: none;
 
   @media (max-width: 1900px) {
